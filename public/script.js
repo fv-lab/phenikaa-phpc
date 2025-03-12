@@ -1,5 +1,5 @@
 async function fetchMetrics() {
-    const response = await fetch("http://10.20.9.200:9090/api/v1/query?query=node_cpu_seconds_total");
+    const response = await fetch("https://render-ebdk.onrender.com/metrics");
     const data = await response.json();
     let html = "<h2>Real-Time Prometheus Metrics</h2><table border='1'><tr><th>Metric</th><th>Value</th></tr>";
     data.data.result.forEach(entry => {
