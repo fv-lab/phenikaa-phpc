@@ -9,3 +9,5 @@ async function fetchMetrics() {
     document.getElementById("metrics").innerHTML = html;
 }
 setInterval(fetchMetrics, 5000); // Refresh every 5 seconds
+
+document.addEventListener("DOMContentLoaded", fetchMetrics); // Fetch immediately on page load
